@@ -9,3 +9,18 @@
   <script src="https://unpkg.com/netlify-cms@2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
+backend:
+  name: github
+  repo: ton-utilisateur/machinebreak
+  branch: main
+media_folder: "assets/images"
+public_folder: "/images"
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "_pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
